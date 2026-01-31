@@ -13,7 +13,7 @@ class Fastbrew < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/kasyap1234/fastbrew/releases/download/v1.1.1/fastbrew_Darwin_x86_64.tar.gz"
-      sha256 "242843fea06865c46324386ac32ae81547234c002fba12efa67102bb9b28518d"
+      sha256 "7e3bc8f6fc227383cc787321b95e089c2044d5197779baeb33b9b230b4d3900d"
 
       def install
         bin.install "fastbrew"
@@ -25,7 +25,7 @@ class Fastbrew < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/kasyap1234/fastbrew/releases/download/v1.1.1/fastbrew_Darwin_arm64.tar.gz"
-      sha256 "d0a6068fa5320058f1ebdb61c04a064da0178e1ad12e2b0d3363d84bcc753101"
+      sha256 "062220fae54bbf46be73c25186ab882dddd6af5e2b648b912383e05adcde6b79"
 
       def install
         bin.install "fastbrew"
@@ -40,7 +40,7 @@ class Fastbrew < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/kasyap1234/fastbrew/releases/download/v1.1.1/fastbrew_Linux_x86_64.tar.gz"
-      sha256 "96b74a6b006083f2362578a0dca0773224a32efa2d9c9a6a4acc66c195e58269"
+      sha256 "0cfd94a6e4525b02aaa0e6408e0bc0b25c84d5298a5df0cc5fae500737f48930"
       def install
         bin.install "fastbrew"
         # Install completions (optional, if we generate them)
@@ -51,7 +51,7 @@ class Fastbrew < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kasyap1234/fastbrew/releases/download/v1.1.1/fastbrew_Linux_arm64.tar.gz"
-      sha256 "19accab3c49f1dc44aa3b8b908cdb6b24550dff2facb75719cca4da67ce21c98"
+      sha256 "c2526ee8ab3b071af9ef271bb7aed23f5e68cb47dfef9d214494592e991effdf"
       def install
         bin.install "fastbrew"
         # Install completions (optional, if we generate them)
