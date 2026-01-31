@@ -5,43 +5,59 @@
 class Fastbrew < Formula
   desc "A lightning-fast wrapper for Homebrew (Linuxbrew)"
   homepage "https://github.com/kasyap1234/fastbrew"
-  version "0.3.2"
+  version "0.4.0"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kasyap1234/fastbrew/releases/download/v0.3.2/fastbrew_Darwin_x86_64.tar.gz"
-      sha256 "1e31572965fe977cf751509f1c3d980c0784fe2c0a67d52c6d2aaac304e79676"
+      url "https://github.com/kasyap1234/fastbrew/releases/download/v0.4.0/fastbrew_Darwin_x86_64.tar.gz"
+      sha256 "3050a24aa489dea68e495858ce7bb1855543f88686c1fbbb6d16c6ffe5e165fe"
 
       def install
         bin.install "fastbrew"
+        # Install completions (optional, if we generate them)
+        # bash_completion.install "completions/fastbrew.bash" => "fastbrew"
+        # zsh_completion.install "completions/fastbrew.zsh" => "_fastbrew"
+        # fish_completion.install "completions/fastbrew.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kasyap1234/fastbrew/releases/download/v0.3.2/fastbrew_Darwin_arm64.tar.gz"
-      sha256 "e90c2ec4ed8f8795f4e85da195951efc2690def7b6649a489b3ab0ba4ed23154"
+      url "https://github.com/kasyap1234/fastbrew/releases/download/v0.4.0/fastbrew_Darwin_arm64.tar.gz"
+      sha256 "584cebcaf4e7e10b30c5c6b324a45de8ce6c61582fe6c7420b8c608632589342"
 
       def install
         bin.install "fastbrew"
+        # Install completions (optional, if we generate them)
+        # bash_completion.install "completions/fastbrew.bash" => "fastbrew"
+        # zsh_completion.install "completions/fastbrew.zsh" => "_fastbrew"
+        # fish_completion.install "completions/fastbrew.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kasyap1234/fastbrew/releases/download/v0.3.2/fastbrew_Linux_x86_64.tar.gz"
-      sha256 "3d0469d5f0e3c40f7b4837d5856a36ea8d31d10e7187f2cb2c7eed2ab7703708"
+      url "https://github.com/kasyap1234/fastbrew/releases/download/v0.4.0/fastbrew_Linux_x86_64.tar.gz"
+      sha256 "bf8c127c9387a440ae55f4d7c8a1144f8b9b56930d1fab1537656ad221c91482"
       def install
         bin.install "fastbrew"
+        # Install completions (optional, if we generate them)
+        # bash_completion.install "completions/fastbrew.bash" => "fastbrew"
+        # zsh_completion.install "completions/fastbrew.zsh" => "_fastbrew"
+        # fish_completion.install "completions/fastbrew.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kasyap1234/fastbrew/releases/download/v0.3.2/fastbrew_Linux_arm64.tar.gz"
-      sha256 "9cceda025149cca6bb87c5b57205d41d36f4741e708c8971905a7167e9b8273e"
+      url "https://github.com/kasyap1234/fastbrew/releases/download/v0.4.0/fastbrew_Linux_arm64.tar.gz"
+      sha256 "fe4e9e95ce9dbfefb6673745fd4d3e9cb97b0dba4c498c4f075eec887d005cfa"
       def install
         bin.install "fastbrew"
+        # Install completions (optional, if we generate them)
+        # bash_completion.install "completions/fastbrew.bash" => "fastbrew"
+        # zsh_completion.install "completions/fastbrew.zsh" => "_fastbrew"
+        # fish_completion.install "completions/fastbrew.fish"
       end
     end
   end
