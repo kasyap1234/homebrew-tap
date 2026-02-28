@@ -13,9 +13,9 @@ class Fastbrew < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/kasyap1234/fastbrew/releases/download/v1.4.0/fastbrew_Darwin_x86_64.tar.gz"
-      sha256 "05b840a7f74b36eabdf6e5d92a4cfe57c1bf67df4fcb19937111f2fede143faa"
+      sha256 "ed32a2e8aa1dfe015b9c4e031f69016b54bc0811dd7029ee16a684bb2d0a3c1c"
 
-      def install
+      define_method(:install) do
         bin.install "fastbrew"
         # Install completions (optional, if we generate them)
         # bash_completion.install "completions/fastbrew.bash" => "fastbrew"
@@ -25,9 +25,9 @@ class Fastbrew < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/kasyap1234/fastbrew/releases/download/v1.4.0/fastbrew_Darwin_arm64.tar.gz"
-      sha256 "f0946477f7d97092e9e979521f7017166f814c5c130f69fad73527b41f49d5ec"
+      sha256 "dddab8762e3a6f1424f2ab21df32ee15f9a872c634f719d1f90fe25f2736d97c"
 
-      def install
+      define_method(:install) do
         bin.install "fastbrew"
         # Install completions (optional, if we generate them)
         # bash_completion.install "completions/fastbrew.bash" => "fastbrew"
@@ -40,8 +40,8 @@ class Fastbrew < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/kasyap1234/fastbrew/releases/download/v1.4.0/fastbrew_Linux_x86_64.tar.gz"
-      sha256 "f921a164427c5d099cf976a291f1733ef60c1a252154be38d813fa2dbe7df394"
-      def install
+      sha256 "238c8161ea6078ecbe2f5907d3c37e10f7d70ee5326933319557c6c8905c0c99"
+      define_method(:install) do
         bin.install "fastbrew"
         # Install completions (optional, if we generate them)
         # bash_completion.install "completions/fastbrew.bash" => "fastbrew"
@@ -51,8 +51,8 @@ class Fastbrew < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kasyap1234/fastbrew/releases/download/v1.4.0/fastbrew_Linux_arm64.tar.gz"
-      sha256 "36dc84dbbf865bddaa9acc85fbd07aaea4d2f13692fe08950404ca4cba0c6d02"
-      def install
+      sha256 "a3ce39b0fe882dd837ce8b6178f3e7d1befd4bf84a48f76854b8fcb0df40bca4"
+      define_method(:install) do
         bin.install "fastbrew"
         # Install completions (optional, if we generate them)
         # bash_completion.install "completions/fastbrew.bash" => "fastbrew"
