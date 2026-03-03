@@ -5,15 +5,15 @@
 class Fastbrew < Formula
   desc "A lightning-fast wrapper for Homebrew (Linuxbrew)"
   homepage "https://github.com/kasyap1234/fastbrew"
-  version "1.5.4"
+  version "1.5.5"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kasyap1234/fastbrew/releases/download/v1.5.4/fastbrew_Darwin_x86_64.tar.gz"
-      sha256 "55978bb488236aabca5003eeed8a418d243d9c4de21a2ed2ed926534cb1fd993"
+      url "https://github.com/kasyap1234/fastbrew/releases/download/v1.5.5/fastbrew_Darwin_x86_64.tar.gz"
+      sha256 "d9d2ebb2a996c6667c369b53e09b962892cb5d05b8a9d0371b18ec02010688ca"
 
       define_method(:install) do
         bin.install "fastbrew"
@@ -24,8 +24,8 @@ class Fastbrew < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kasyap1234/fastbrew/releases/download/v1.5.4/fastbrew_Darwin_arm64.tar.gz"
-      sha256 "30dc83f3af90ec7b0c3d08d099bed1ebd05ef97d9948e2dadcadddff7536c262"
+      url "https://github.com/kasyap1234/fastbrew/releases/download/v1.5.5/fastbrew_Darwin_arm64.tar.gz"
+      sha256 "20b863642b8d68a3b96b5408e18fd77e7320808a9f96f462e83390bc62762bbb"
 
       define_method(:install) do
         bin.install "fastbrew"
@@ -39,8 +39,8 @@ class Fastbrew < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kasyap1234/fastbrew/releases/download/v1.5.4/fastbrew_Linux_x86_64.tar.gz"
-      sha256 "945fb4e68a482f8312f53f3721cc55ebf74c23e9eab6485ece6849d048ab88f8"
+      url "https://github.com/kasyap1234/fastbrew/releases/download/v1.5.5/fastbrew_Linux_x86_64.tar.gz"
+      sha256 "b2c5e67395e69155517dc23da41ef430f27e81e3b681abb2dc8f08ab6852203f"
       define_method(:install) do
         bin.install "fastbrew"
         # Install completions (optional, if we generate them)
@@ -50,8 +50,8 @@ class Fastbrew < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kasyap1234/fastbrew/releases/download/v1.5.4/fastbrew_Linux_arm64.tar.gz"
-      sha256 "8b5abd56bdf49df05d9c1be75ff64f98d56cba6a1ec9475145764535ca11018a"
+      url "https://github.com/kasyap1234/fastbrew/releases/download/v1.5.5/fastbrew_Linux_arm64.tar.gz"
+      sha256 "c373bfcde08174b987f65055ee255a093364ade47a9cecfb14f3c3a939e39bca"
       define_method(:install) do
         bin.install "fastbrew"
         # Install completions (optional, if we generate them)
